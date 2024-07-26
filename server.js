@@ -7,7 +7,7 @@
 * 
 * Name:Parth Bharvad  ID:  Date:136797230 22 JuLY 2024
 *
-*  Online (vercel) Link: 
+*  Online (vercel) Link: https://assignment-5-ovajijrpy-parth-bharvads-projects.vercel.app
 *
 ********************************************************************************/ 
 
@@ -16,31 +16,12 @@ const express = require("express");
 const exphbs = require('express-handlebars');
 const path = require("path");
 const collegeData = require("./modules/collegeData");
-
-
-require('pg'); // explicitly require the "pg" module
-
 const app = express();
 
-// Set the views directory
-app.set('views', path.join(__dirname,'views'));
-app.set('view engine', 'hbs'); // Example using Handlebars
+app.set('views', path.join(__dirname, '/views'));
+app.set('view engine', 'hbs');
 
-// Serve static files from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Define routes
-app.get('/', (req, res) => {
-    res.render('index'); // Render the index view
-});
-
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
-
-module.exports = app;
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.engine('hbs', exphbs.engine({
   extname: '.hbs',
