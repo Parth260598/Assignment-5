@@ -34,6 +34,14 @@ app.get('/', (req, res) => {
     res.render('index'); // Render the index view
 });
 
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
+module.exports = app;
+
 app.engine('hbs', exphbs.engine({
   extname: '.hbs',
   helpers: {
