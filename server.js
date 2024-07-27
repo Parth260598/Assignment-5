@@ -7,7 +7,7 @@
 * 
 * Name:Parth Bharvad  ID:  Date:136797230 22 JuLY 2024
 *
-*  Online (vercel) Link: https://assignment-5-ovajijrpy-parth-bharvads-projects.vercel.app
+*  Online (vercel) Link: https://vercel.com/parth-bharvads-projects/assignment-5/2VMy8fFsAMD4FnK7SZEqC61ws1Dg
 *
 ********************************************************************************/ 
 
@@ -51,7 +51,7 @@ app.engine('hbs', exphbs.engine({
   defaultLayout: 'main'
 }));
 app.set('view engine', 'hbs');
-app.use(express.static('public'));
+app.use(express.static('/public'));
 app.use(express.urlencoded({ extended: true }));
 
 // Initialize collegeData
